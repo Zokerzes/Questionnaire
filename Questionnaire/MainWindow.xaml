@@ -5,8 +5,95 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Questionnaire"
         mc:Ignorable="d"
-        Title="MainWindow" Height="766" Width="468">
+        Title="Анкета програмиста" Height="766" Width="468">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="108*"/>
+            <RowDefinition Height="105*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="83*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Height="67" Width="138"
+                   >
+            <TextBlock DockPanel.Dock="Top" 
+                       FontWeight="Bold"
+                       FontSize="30" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center">
+                Анкета
+            </TextBlock>
+            <TextBlock DockPanel.Dock="Top" 
+                       FontWeight="DemiBold"
+                       FontSize="20" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center">
+             Программиста
+            </TextBlock>
+        </DockPanel>
+
+        <GroupBox 
+                  Header="Введите ФИО" Margin="0,83,0,3" Grid.RowSpan="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="31*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0"
+                           Grid.Row="0"
+                           Text="Фамилия" 
+                           VerticalAlignment="Center"
+                           />
+                <TextBox  Grid.Column="1" 
+                          Text=""
+                          Margin="0 5"/>
+                <TextBlock Grid.Column="0"
+                           Grid.Row="1"
+                           Text="Имя"
+                           VerticalAlignment="Center"/>
+                <TextBox  Grid.Column="1" 
+                          Grid.Row="1"
+                          Text=""
+                           Margin="0 5"/>
+                <TextBlock Grid.Column="0"
+                           Grid.Row="2"
+                           Text="Отчество"
+                           VerticalAlignment="Center"/>
+                <TextBox  Grid.Column="1" 
+                          Grid.Row="2"
+                          Text=""
+                          Margin="0 5"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1"
+                  Header="Выберите языки програмирования, которые знаете" Margin="0,108,0,0" Grid.RowSpan="2" 
+                  >
+            <StackPanel>
+                <CheckBox></CheckBox>
+                <CheckBox></CheckBox>
+                <CheckBox></CheckBox>
+                <CheckBox></CheckBox>
+                <Expander>
+                    <StackPanel>
+
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </GroupBox>
+
 
     </Grid>
 </Window>
