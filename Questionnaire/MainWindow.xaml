@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Questionnaire"
         mc:Ignorable="d"
-        Title="Анкета програмиста" Height="900" Width="468">
+        Title="Анкета програмиста" Height="850" Width="468">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="110*"/>
-            <RowDefinition Height="142*"/>
+            <RowDefinition Height="123*"/>
+            <RowDefinition Height="130*"/>
             <RowDefinition Height ="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="74*"/>
-            <RowDefinition Height="110*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="92*"/>
         </Grid.RowDefinitions>
 
         <DockPanel VerticalAlignment="Center"
@@ -38,8 +38,8 @@
             </TextBlock>
         </DockPanel>
 
-        <GroupBox 
-                  Header="Введите ФИО" Margin="0,83,0,3" Grid.RowSpan="2">
+        <GroupBox Grid.Row="1"
+                  Header="Введите ФИО">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="7*"/>
@@ -96,12 +96,12 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <RichTextBox Height="80"/>
+                        <RichTextBox Height="60"/>
                         <StackPanel Grid.Column="1">
                             <Button Content="Добавить" 
-                                    Height="40"/>
+                                    Height="30"/>
                             <Button Content="удалить выделеное" 
-                                    Height="40"/>
+                                    Height="30"/>
                         </StackPanel>
 
                     </Grid>
@@ -127,7 +127,7 @@
                        x:Name="labelCoutText"
                        Content="0/500"
                        >
-                    
+
                 </Label>
             </DockPanel>
         </GroupBox>
@@ -138,7 +138,7 @@
                         DisplayDateEnd="12.1.2004">
             </DatePicker>
         </GroupBox>
-        
+
         <GroupBox Grid.Row="5"
                   Header="Ваш уровень английского">
             <StackPanel>
@@ -158,7 +158,7 @@
                               Width="150"
                               >
                     <WrapPanel Width="150">
-                        
+
                     </WrapPanel>
                 </ComboBoxItem>
 
@@ -187,8 +187,8 @@
                     <TextBlock>Android</TextBlock>
                 </WrapPanel>
             </ComboBox>
-            
-            
+
+
         </GroupBox>
 
         <GroupBox Grid.Row="7"
@@ -206,12 +206,16 @@
                     </Slider>
                     <TextBlock>100</TextBlock>
                 </WrapPanel>
-                <Label Content="0"
+                <Label Content="0 %"
                        x:Name="likeProgramming"
                        HorizontalContentAlignment="Center"
                        />
             </StackPanel>
         </GroupBox>
 
+        <Border Grid.Row="8"
+                Height="50">
+            <Button Content="Пройти анкетирование"/>
+        </Border>
     </Grid>
 </Window>

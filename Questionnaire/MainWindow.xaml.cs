@@ -34,7 +34,7 @@ namespace Questionnaire
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            likeProgramming.Content = Convert.ToInt16(sliderLike.Value*10).ToString();
+            likeProgramming.Content = $"{Convert.ToInt16(sliderLike.Value*10).ToString()} %";
         }
     }
 }
