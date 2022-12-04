@@ -20,9 +20,21 @@ namespace Questionnaire
     /// </summary>
     public partial class MainWindow : Window
     {
+        int countSymbol;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            countSymbol = countText.Text.Length;
+            labelCoutText.Content = $"{countSymbol.ToString()}/500";
+        }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            likeProgramming.Content = Convert.ToInt16(sliderLike.Value*10).ToString();
         }
     }
 }

@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Questionnaire"
         mc:Ignorable="d"
-        Title="Анкета програмиста" Height="766" Width="468">
+        Title="Анкета програмиста" Height="900" Width="468">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="83*"/>
-            <RowDefinition Height="108*"/>
-            <RowDefinition Height="105*"/>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="83*"/>
-            <RowDefinition Height="83*"/>
-            <RowDefinition Height="83*"/>
-            <RowDefinition Height="83*"/>
-            <RowDefinition Height="83*"/>
+            <RowDefinition Height="110*"/>
+            <RowDefinition Height="142*"/>
+            <RowDefinition Height ="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="110*"/>
         </Grid.RowDefinitions>
 
         <DockPanel VerticalAlignment="Center"
@@ -58,7 +58,8 @@
                            />
                 <TextBox  Grid.Column="1" 
                           Text=""
-                          Margin="0 5"/>
+                          Margin="0 5"
+                          MaxLength="50"/>
                 <TextBlock Grid.Column="0"
                            Grid.Row="1"
                            Text="Имя"
@@ -66,7 +67,8 @@
                 <TextBox  Grid.Column="1" 
                           Grid.Row="1"
                           Text=""
-                           Margin="0 5"/>
+                          Margin="0 5"
+                          MaxLength="50"/>
                 <TextBlock Grid.Column="0"
                            Grid.Row="2"
                            Text="Отчество"
@@ -74,26 +76,142 @@
                 <TextBox  Grid.Column="1" 
                           Grid.Row="2"
                           Text=""
-                          Margin="0 5"/>
+                          Margin="0 5"
+                          MaxLength="50"/>
             </Grid>
         </GroupBox>
 
-        <GroupBox Grid.Row="1"
-                  Header="Выберите языки програмирования, которые знаете" Margin="0,108,0,0" Grid.RowSpan="2" 
+        <GroupBox Grid.Row="2"
+                  Header="Выберите языки програмирования, которые знаете" 
                   >
             <StackPanel>
-                <CheckBox></CheckBox>
-                <CheckBox></CheckBox>
-                <CheckBox></CheckBox>
-                <CheckBox></CheckBox>
-                <Expander>
-                    <StackPanel>
+                <CheckBox>C#</CheckBox>
+                <CheckBox>JavaScript</CheckBox>
+                <CheckBox>Pyton</CheckBox>
+                <CheckBox>C++</CheckBox>
+                <Expander Header="Дополнительно"
+                          Panel.ZIndex="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <RichTextBox Height="80"/>
+                        <StackPanel Grid.Column="1">
+                            <Button Content="Добавить" 
+                                    Height="40"/>
+                            <Button Content="удалить выделеное" 
+                                    Height="40"/>
+                        </StackPanel>
 
-                    </StackPanel>
+                    </Grid>
                 </Expander>
             </StackPanel>
         </GroupBox>
 
+        <GroupBox Grid.Row="3"
+                  Header="Раскажите о себе">
+            <DockPanel>
+                <TextBox MaxLength="500"
+                         x:Name="countText"
+                         DockPanel.Dock="Top"
+                         VerticalScrollBarVisibility="Auto" 
+                         TextWrapping="WrapWithOverflow" 
+                         Height="58"
+                         Text=""
+                         TextChanged="TextBox_TextChanged">
+                </TextBox>
+                <Label DockPanel.Dock="Bottom"
+                       VerticalAlignment="Top"
+                       Height="25"
+                       x:Name="labelCoutText"
+                       Content="0/500"
+                       >
+                    
+                </Label>
+            </DockPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="4"
+                  Header="Выберите дату рождения">
+            <DatePicker DisplayDateStart="1.1.1922"
+                        DisplayDateEnd="12.1.2004">
+            </DatePicker>
+        </GroupBox>
+        
+        <GroupBox Grid.Row="5"
+                  Header="Ваш уровень английского">
+            <StackPanel>
+                <RadioButton>(A1) - начальный</RadioButton>
+                <RadioButton>(A2) - ниже среднего</RadioButton>
+                <RadioButton>(B1) - средний</RadioButton>
+                <RadioButton>(B2) - выше среднего</RadioButton>
+                <RadioButton>(C1) - продвинутый</RadioButton>
+                <RadioButton>(C2) - профессиональный урорвень владения</RadioButton>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="6"
+                  Header="Выберите ОС, которая вам нравится">
+            <ComboBox Height="50">
+                <ComboBoxItem IsSelected="True"
+                              Width="150"
+                              >
+                    <WrapPanel Width="150">
+                        
+                    </WrapPanel>
+                </ComboBoxItem>
+
+                <WrapPanel Tag ="Windows" >
+                    <Image Source="Resources\windows.png"/>
+                    <TextBlock>Windows</TextBlock>
+                </WrapPanel>
+
+                <WrapPanel Tag="Linux">
+                    <Image Source="Resources\linux.png"/>
+                    <TextBlock>Linux</TextBlock>
+                </WrapPanel>
+
+                <WrapPanel Tag="MacOS">
+                    <Image Source="Resources\mac.png"/>
+                    <TextBlock>MacOS</TextBlock>
+                </WrapPanel>
+
+                <WrapPanel Tag="iOS">
+                    <Image Source="Resources\ios.png"/>
+                    <TextBlock>iOS</TextBlock>
+                </WrapPanel>
+
+                <WrapPanel Tag="Android">
+                    <Image Source="Resources\android.png"/>
+                    <TextBlock>Android</TextBlock>
+                </WrapPanel>
+            </ComboBox>
+            
+            
+        </GroupBox>
+
+        <GroupBox Grid.Row="7"
+                  Header="Насколько вам нравится программирование">
+            <StackPanel HorizontalAlignment="Center">
+                <WrapPanel>
+                    <TextBlock Width="auto" 
+                           Text="0 "
+                           VerticalAlignment="Bottom"/>
+                    <Slider 
+                        Width="200"
+                        x:Name="sliderLike"
+                        VerticalAlignment="Top"
+                        ValueChanged="Slider_ValueChanged">
+                    </Slider>
+                    <TextBlock>100</TextBlock>
+                </WrapPanel>
+                <Label Content="0"
+                       x:Name="likeProgramming"
+                       HorizontalContentAlignment="Center"
+                       />
+            </StackPanel>
+        </GroupBox>
 
     </Grid>
 </Window>
