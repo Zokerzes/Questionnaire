@@ -24,6 +24,7 @@ namespace Questionnaire
         public MainWindow()
         {
             InitializeComponent();
+            ProgramerProfile programerProfile = new ProgramerProfile();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -35,6 +36,11 @@ namespace Questionnaire
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             likeProgramming.Content = $"{Convert.ToInt16(sliderLike.Value*10).ToString()} %";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
