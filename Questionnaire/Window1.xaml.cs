@@ -22,7 +22,14 @@ namespace Questionnaire
         public Window1()
         {
             InitializeComponent();
-            LastNameText.Text = 
+           
         }
+
+        public Window1(ProgramerProfile programerProfile)
+        {
+            InitializeComponent();
+            LastNameText.Text = programerProfile.lastName;
+        }
+
     }
 }

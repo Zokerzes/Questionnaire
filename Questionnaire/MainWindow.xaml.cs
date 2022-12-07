@@ -21,6 +21,7 @@ namespace Questionnaire
     public partial class MainWindow : Window
     {
         int countSymbol;
+        ProgramerProfile programerProfile = new ProgramerProfile();
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +41,8 @@ namespace Questionnaire
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Window1 window1 = new Window1(programerProfile);
+            window1.Show();
         }
     }
 }
