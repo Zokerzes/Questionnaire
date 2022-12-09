@@ -41,6 +41,10 @@ namespace Questionnaire
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            programerProfile.lastName = fam.Text;
+            programerProfile.firstName = nam.Text;
+            programerProfile.patronymic = otch.Text;
+
             Window1 window1 = new Window1(programerProfile);
             window1.Show();
         }

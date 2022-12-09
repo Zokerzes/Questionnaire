@@ -12,10 +12,14 @@
             <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
-        <TextBlock x:Name="LastNameText"/>
-
-        <!--привязка binding  не понялм  !!!-->
+        <StackPanel>
+            <TextBlock x:Name="LastNameText"
+                       Text="f"/>
+            <TextBlock x:Name="FirstNameText"
+                       Text="n o"/>
+            <!--в поле имя  через пробел добавил и отчество-->
+        </StackPanel>
+        
 
 
 

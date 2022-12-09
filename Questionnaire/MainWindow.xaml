@@ -70,6 +70,7 @@
                            VerticalAlignment="Center"/>
                 <TextBox  Grid.Column="1" 
                           Grid.Row="1"
+                          x:Name="nam"
                           Text=""
                           Margin="0 5"
                           MaxLength="50"/>
@@ -79,6 +80,7 @@
                            VerticalAlignment="Center"/>
                 <TextBox  Grid.Column="1" 
                           Grid.Row="2"
+                          x:Name="otch"
                           Text=""
                           Margin="0 5"
                           MaxLength="50"/>

@@ -29,6 +29,8 @@ namespace Questionnaire
         {
             InitializeComponent();
             LastNameText.Text = programerProfile.lastName;
+            FirstNameText.Text = programerProfile.firstName;
+            FirstNameText.Text += $" {programerProfile.patronymic}";
         }
 
     }
