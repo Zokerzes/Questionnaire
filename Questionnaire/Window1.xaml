@@ -7,20 +7,142 @@
         mc:Ignorable="d"
         Title="Ваша форма" Height="450" Width="468">
     <Grid>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel>
-            <TextBlock x:Name="LastNameText"
-                       Text="f"/>
-            <TextBlock x:Name="FirstNameText"
-                       Text="n o"/>
-            <!--в поле имя  через пробел добавил и отчество-->
-        </StackPanel>
-        
+        <Border Background="AliceBlue" 
+                Grid.Row="0"
+                >
+            <Viewbox>
+                <StackPanel >
+                    <TextBlock  x:Name="LastNameText"
+                                Text="Family"
+                                FontSize="30" 
+                                FontWeight="Medium"
+                                HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="FirstNameText"
+                               Text="Name Parent"
+                               HorizontalAlignment="Center"/>
+                    <!--в поле имя  через пробел добавил и отчество-->
+                </StackPanel>
 
+            </Viewbox>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="167*"/>
+                <ColumnDefinition Width="301*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Column="0"
+                     Grid.Row="0"
+                     FontWeight="Medium"
+                     Text="Дата рождения" HorizontalContentAlignment="Right" 
+                     VerticalContentAlignment="Center" 
+                     />
+            <TextBox Grid.Column="0"
+                     Grid.Row="1"
+                     FontWeight="Medium"
+                     Text="Полных лет" HorizontalContentAlignment="Right" 
+                     VerticalContentAlignment="Center"/>
+            <TextBox Grid.Column="0"
+                     Grid.Row="2"
+                     FontWeight="Medium"
+                     Text="О себе" HorizontalContentAlignment="Right" 
+                     VerticalContentAlignment="Center"/>
+            <TextBox Grid.Column="0"
+                     Grid.Row="3"
+                     FontWeight="Medium"
+                     Text="Языки программирования" 
+                     HorizontalContentAlignment="Right" 
+                     VerticalContentAlignment="Center" 
+                     />
+            <TextBox Grid.Column="0"
+                     Grid.Row="4"
+                     FontWeight="Medium"
+                     Text="Уровень английского"
+                     HorizontalContentAlignment="Right" 
+                     VerticalContentAlignment="Center"/>
+            <TextBox Grid.Column="0"
+                     Grid.Row="5"
+                     FontWeight="Medium"
+                     Text="Предпочитаемая ОС" 
+                     HorizontalContentAlignment="Right" 
+                     VerticalContentAlignment="Center"/>
+            <TextBox Grid.Column="0"
+                     Grid.Row="6"
+                     FontWeight="Medium"
+                     Text="Процент увлечением" 
+                     HorizontalContentAlignment="Right" 
+                     VerticalContentAlignment="Center"/>
+
+
+            <TextBox Grid.Column="1"
+                     Grid.Row="0"
+                     x:Name="f_birthday"
+                     Text="Дата рождения"
+                     HorizontalContentAlignment="Left" 
+                     VerticalContentAlignment="Center"/>
+            <TextBox Grid.Column="1"
+                     Grid.Row="1"
+                     x:Name="f_full_year"
+                     Text="Полных лет"
+                     HorizontalContentAlignment="Left" 
+                     VerticalContentAlignment="Center"/>
+            
+            <ScrollViewer  Grid.Column="1"
+                           Grid.Row="2"
+                           VerticalScrollBarVisibility="Auto">
+                <TextBox
+                        x:Name="f_aboutMe"
+                        Text="О себе" HorizontalContentAlignment="Left"
+                        VerticalContentAlignment="Center"
+                        TextWrapping="WrapWithOverflow"
+                    />
+
+            </ScrollViewer>
+
+            <TextBox Grid.Column="1"
+                     Grid.Row="3"
+                     x:Name="f_prog_lang"
+                     Text="Языки программирования" 
+                     HorizontalContentAlignment="Left" 
+                     VerticalContentAlignment="Center" 
+                     />
+
+            <TextBox Grid.Column="1"
+                     Grid.Row="4"
+                     x:Name="f_english_level"
+                     Text="Уровень английского" 
+                     HorizontalContentAlignment="Left"
+                     VerticalContentAlignment="Center" 
+                     />
+            <TextBox Grid.Column="1"
+                     Grid.Row="5"
+                     x:Name="f_os"
+                     Text="Предпочитаемая ОС" 
+                     HorizontalContentAlignment="Left"
+                     VerticalContentAlignment="Center"/>
+            <TextBox Grid.Column="1"
+                     Grid.Row="6"
+                     x:Name="f_procent"
+                     Text="Процент увлечением" 
+                     HorizontalContentAlignment="Left"
+                     VerticalContentAlignment="Center" 
+                     />
+
+        </Grid>
 
 
         <!--<Grid.ColumnDefinitions>

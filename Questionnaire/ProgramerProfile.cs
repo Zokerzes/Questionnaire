@@ -13,7 +13,7 @@ namespace Questionnaire
         public string patronymic = "Иванович";
         public string programmingLanguages = "С++";
         public string aboutMe = "что-то";
-        public string birthday = "1.11.1111";
+        public DateTime birthday = DateTime.MinValue;
         public string englishLevel = "1";
         public string likeProgramming = "100";
         public string chooseOS = "Windows";
@@ -25,7 +25,7 @@ namespace Questionnaire
             patronymic = "Иванович";
             programmingLanguages = "С++";
             aboutMe = "что-то";
-            birthday = "1.11.1111";
+            birthday = DateTime.MinValue;
             englishLevel = "1";
             likeProgramming = "100";
             chooseOS = "Windows";

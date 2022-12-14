@@ -31,6 +31,18 @@ namespace Questionnaire
             LastNameText.Text = programerProfile.lastName;
             FirstNameText.Text = programerProfile.firstName;
             FirstNameText.Text += $" {programerProfile.patronymic}";
+            f_birthday.Text = programerProfile.birthday.ToShortDateString();
+            TimeSpan ts = DateTime.Now - programerProfile.birthday;
+            int tempDate = (int)(ts.TotalDays/360);
+            f_full_year.Text = tempDate.ToString();
+            f_aboutMe.Text = programerProfile.aboutMe;
+
+            //programmingLanguages = "С++";
+            //aboutMe = "что-то";
+            //birthday = "1.11.1111";
+            //englishLevel = "1";
+            //likeProgramming = "100";
+            //chooseOS = "Windows";
         }
 
     }

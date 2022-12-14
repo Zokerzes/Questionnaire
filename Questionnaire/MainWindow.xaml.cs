@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -44,6 +46,10 @@ namespace Questionnaire
             programerProfile.lastName = fam.Text;
             programerProfile.firstName = nam.Text;
             programerProfile.patronymic = otch.Text;
+            programerProfile.birthday = Convert.ToDateTime(birthday.Text);
+            programerProfile.aboutMe = countText.Text;
+
+
 
             Window1 window1 = new Window1(programerProfile);
             window1.Show();
