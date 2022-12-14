@@ -36,7 +36,8 @@ namespace Questionnaire
             int tempDate = (int)(ts.TotalDays/360);
             f_full_year.Text = tempDate.ToString();
             f_aboutMe.Text = programerProfile.aboutMe;
-
+            f_prog_lang.Text = programerProfile.programmingLanguages;
+            f_english_level.Text = programerProfile.englishLevel;
             //programmingLanguages = "С++";
             //aboutMe = "что-то";
             //birthday = "1.11.1111";

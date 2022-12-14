@@ -85,11 +85,11 @@
                 <GroupBox Grid.Row="2"
                   Header="Выберите языки програмирования, которые знаете" 
                   >
-                    <StackPanel>
-                        <CheckBox>C#</CheckBox>
-                        <CheckBox>JavaScript</CheckBox>
-                        <CheckBox>Pyton</CheckBox>
-                        <CheckBox>C++</CheckBox>
+                    <StackPanel >
+                        <CheckBox x:Name="langProg_cs">C#</CheckBox>
+                        <CheckBox x:Name="langProg_js">JavaScript</CheckBox>
+                        <CheckBox x:Name="langProg_p">Pyton</CheckBox>
+                        <CheckBox x:Name="langProg_cp">C++</CheckBox>
                         <Expander Header="Дополнительно"
                           Panel.ZIndex="1">
                             <Grid>
@@ -145,13 +145,19 @@
 
                 <GroupBox 
                   Header="Ваш уровень английского">
-                    <StackPanel>
-                        <RadioButton>(A1) - начальный</RadioButton>
-                        <RadioButton>(A2) - ниже среднего</RadioButton>
-                        <RadioButton>(B1) - средний</RadioButton>
-                        <RadioButton>(B2) - выше среднего</RadioButton>
-                        <RadioButton>(C1) - продвинутый</RadioButton>
-                        <RadioButton>(C2) - профессиональный урорвень владения</RadioButton>
+                    <StackPanel x:Name="sprb">
+                        <RadioButton
+                            x:Name="rba1">(A1) - начальный</RadioButton>
+                        <RadioButton
+                            x:Name="rba2">(A2) - ниже среднего</RadioButton>
+                        <RadioButton
+                            x:Name="rbb1">(B1) - средний</RadioButton>
+                        <RadioButton
+                            x:Name="rbb2">(B2) - выше среднего</RadioButton>
+                        <RadioButton
+                            x:Name="rbc1">(C1) - продвинутый</RadioButton>
+                        <RadioButton
+                            x:Name="rbc2">(C2) - профессиональный урорвень владения</RadioButton>
                     </StackPanel>
                 </GroupBox>
 

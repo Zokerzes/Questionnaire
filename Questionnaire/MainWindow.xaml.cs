@@ -41,6 +41,29 @@ namespace Questionnaire
             likeProgramming.Content = $"{Convert.ToInt16(sliderLike.Value*10).ToString()} %";
         }
 
+        private string LP()
+        {
+            string lP = "";
+            if (langProg_cp.IsChecked == true) lP += "C++ \t";
+            if (langProg_cs.IsChecked == true) lP += "C# \t";
+            if (langProg_js.IsChecked == true) lP += "JS \t";
+            if (langProg_p.IsChecked == true) lP += "Pyton \t";
+
+            return lP;
+        }
+
+        private string RB()
+        {
+            string enlvl;
+            if (rba1.IsChecked == true) enlvl = rba1.Content.ToString();
+            else if (rba2.IsChecked == true) enlvl = rba2.Content.ToString();
+            else if (rbb1.IsChecked == true) enlvl = rbb1.Content.ToString();
+            else if (rbb2.IsChecked == true) enlvl = rbb2.Content.ToString();
+            else if (rbc1.IsChecked == true) enlvl = rbc1.Content.ToString();
+            else if (rbc2.IsChecked == true) enlvl = rbc2.Content.ToString();
+            else enlvl = "";
+            return enlvl;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             programerProfile.lastName = fam.Text;
@@ -48,6 +71,9 @@ namespace Questionnaire
             programerProfile.patronymic = otch.Text;
             programerProfile.birthday = Convert.ToDateTime(birthday.Text);
             programerProfile.aboutMe = countText.Text;
+            programerProfile.programmingLanguages = LP();
+            programerProfile.englishLevel = RB();
+
 
 
 
