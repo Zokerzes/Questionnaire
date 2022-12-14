@@ -22,7 +22,7 @@ namespace Questionnaire
         public Window1()
         {
             InitializeComponent();
-           
+
         }
 
         public Window1(ProgramerProfile programerProfile)
@@ -33,17 +33,15 @@ namespace Questionnaire
             FirstNameText.Text += $" {programerProfile.patronymic}";
             f_birthday.Text = programerProfile.birthday.ToShortDateString();
             TimeSpan ts = DateTime.Now - programerProfile.birthday;
-            int tempDate = (int)(ts.TotalDays/360);
+            int tempDate = (int)(ts.TotalDays / 360);
             f_full_year.Text = tempDate.ToString();
             f_aboutMe.Text = programerProfile.aboutMe;
             f_prog_lang.Text = programerProfile.programmingLanguages;
             f_english_level.Text = programerProfile.englishLevel;
-            //programmingLanguages = "С++";
-            //aboutMe = "что-то";
-            //birthday = "1.11.1111";
-            //englishLevel = "1";
-            //likeProgramming = "100";
-            //chooseOS = "Windows";
+            f_os.Text = programerProfile.chooseOS;            //chooseOS = "Windows"       непонял
+            f_procent.Text = programerProfile.likeProgramming;
+
+           
         }
 
     }

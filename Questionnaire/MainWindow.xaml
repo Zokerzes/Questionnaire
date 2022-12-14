@@ -163,9 +163,10 @@
 
                 <GroupBox 
                   Header="Выберите ОС, которая вам нравится">
-                    <ComboBox Height="50">
+                    <ComboBox Height="50" x:Name="os">
                         <ComboBoxItem IsSelected="True"
                               Width="150"
+                                     
                               >
                             <WrapPanel Width="150">
 

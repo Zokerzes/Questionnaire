@@ -73,7 +73,8 @@ namespace Questionnaire
             programerProfile.aboutMe = countText.Text;
             programerProfile.programmingLanguages = LP();
             programerProfile.englishLevel = RB();
-
+            programerProfile.chooseOS = os.SelectedValue.ToString(); // не понятно как задать выбор
+            programerProfile.likeProgramming = likeProgramming.Content.ToString();
 
 
 
